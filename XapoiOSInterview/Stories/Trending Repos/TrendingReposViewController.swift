@@ -20,6 +20,13 @@ class TrendingReposViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(TrendingReposViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        
+        return refreshControl
+    }()
+    
     private let viewModel: TrendingReposViewModel
     
     init(viewModel: TrendingReposViewModel) {
@@ -47,8 +54,10 @@ class TrendingReposViewController: UIViewController {
             .observe(on: UIScheduler())
             .startWithValues { (isLoading) in
                 if isLoading {
+                    self.refreshControl.beginRefreshing()
                     self.activityIndicator.startAnimating()
                 } else {
+                    self.refreshControl.endRefreshing()
                     self.activityIndicator.stopAnimating()
                 }
         }
@@ -57,12 +66,17 @@ class TrendingReposViewController: UIViewController {
     private func setupTableView() {
         let nib = UINib(nibName: "RepoCellView", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: repoCellIdentifier)
+        tableView.addSubview(self.refreshControl)
         tableView.dataSource = self
         tableView.delegate = self
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) is not supported")
+    }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        viewModel.refreshRepos()
     }
 }
 
@@ -94,7 +108,7 @@ extension TrendingReposViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == viewModel.lastPositionTillScrol() {
-            self.viewModel.loadMore()
+            self.viewModel.loadMoreRepos()
         }
     }
 }

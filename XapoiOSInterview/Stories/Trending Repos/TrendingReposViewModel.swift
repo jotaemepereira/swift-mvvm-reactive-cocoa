@@ -22,6 +22,7 @@ class TrendingReposViewModel {
     let isLoading = MutableProperty(false)
     
     private var page: Int
+    private var refresh = false
     private let repoChangesObserver: Signal<Void, NoError>.Observer
     
     init(apiClient: ApiClient) {
@@ -34,15 +35,21 @@ class TrendingReposViewModel {
         self.repoChangesSignal = repoChangesSignal
         self.repoChangesObserver = repoChangesObserver
         
-        loadRepos(page: page)
+        loadRepos()
     }
     
-    func loadMore() {
+    func refreshRepos() {
+        page = 1
+        refresh = true
+        loadRepos()
+    }
+    
+    func loadMoreRepos() {
         page = page + 1
-        loadRepos(page: page)
+        loadRepos()
     }
     
-    private func loadRepos(page: Int) {
+    private func loadRepos() {
         apiClient.getTrendingRepos(page: page)
             .on(starting: { self.isLoading.value = true })
             .flatMap(.latest, { (repos) -> SignalProducer<[Repo], NoError> in
@@ -52,6 +59,11 @@ class TrendingReposViewModel {
             .promoteError()
             .observe(on: UIScheduler())
             .startWithValues { (repos) in
+                if self.refresh {
+                    self.repos.removeAll()
+                    self.refresh = false
+                }
+                
                 self.repos.append(contentsOf: repos)
                 self.repoChangesObserver.send(value: ())
         }
