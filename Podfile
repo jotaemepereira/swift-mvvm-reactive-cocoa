@@ -10,7 +10,7 @@ target 'XapoiOSInterview' do
   pod 'Swinject'
   pod 'ObjectMapper', '~> 3.1'
   pod 'AlamofireObjectMapper', '~> 5.0'
-  
+ 
   target 'XapoiOSInterviewTests' do
     inherit! :search_paths
     # Pods for testing

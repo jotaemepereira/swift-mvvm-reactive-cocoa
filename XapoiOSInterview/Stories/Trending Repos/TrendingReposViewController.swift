@@ -91,4 +91,10 @@ extension TrendingReposViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return repoCellHeight
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.lastPositionTillScrol() {
+            self.viewModel.loadMore()
+        }
+    }
 }

@@ -21,10 +21,11 @@ class TrendingReposViewModel {
     let repoChangesSignal: Signal<Void, NoError>
     let isLoading = MutableProperty(false)
     
-    private var page = 1
+    private var page: Int
     private let repoChangesObserver: Signal<Void, NoError>.Observer
     
     init(apiClient: ApiClient) {
+        self.page = 1
         self.apiClient = apiClient
         self.repos = []
         self.isLoading.value = false
@@ -33,6 +34,15 @@ class TrendingReposViewModel {
         self.repoChangesSignal = repoChangesSignal
         self.repoChangesObserver = repoChangesObserver
         
+        loadRepos(page: page)
+    }
+    
+    func loadMore() {
+        page = page + 1
+        loadRepos(page: page)
+    }
+    
+    private func loadRepos(page: Int) {
         apiClient.getTrendingRepos(page: page)
             .on(starting: { self.isLoading.value = true })
             .flatMap(.latest, { (repos) -> SignalProducer<[Repo], NoError> in
@@ -44,11 +54,15 @@ class TrendingReposViewModel {
             .startWithValues { (repos) in
                 self.repos.append(contentsOf: repos)
                 self.repoChangesObserver.send(value: ())
-            }
+        }
     }
     
     func numberOfRepos() -> Int {
         return repos.count
+    }
+    
+    func lastPositionTillScrol() -> Int {
+        return repos.count - 3
     }
     
     func repoNameAt(position: Int) -> String {
