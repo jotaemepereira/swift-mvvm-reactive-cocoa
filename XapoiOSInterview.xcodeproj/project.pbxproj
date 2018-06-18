@@ -16,6 +16,11 @@
 		BB6FAC6620D75939008F9DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6FAC6420D75939008F9DFB /* LaunchScreen.storyboard */; };
 		BB6FAC7120D75939008F9DFB /* XapoiOSInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC7020D75939008F9DFB /* XapoiOSInterviewTests.swift */; };
 		BB6FAC7C20D75939008F9DFB /* XapoiOSInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC7B20D75939008F9DFB /* XapoiOSInterviewUITests.swift */; };
+		BBF1693A20D7F5570066286A /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1693920D7F5570066286A /* ApiRouter.swift */; };
+		BBF1693C20D7FACF0066286A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1693B20D7FACF0066286A /* Constants.swift */; };
+		BBF1693E20D7FCF70066286A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1693D20D7FCF70066286A /* ApiClient.swift */; };
+		BBF1694220D7FEED0066286A /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694120D7FEED0066286A /* Repo.swift */; };
+		BBF1694420D800A60066286A /* Readme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694320D800A60066286A /* Readme.swift */; };
 		F43B0FDC6C945A085618B8C4 /* Pods_XapoiOSInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513234BA095FC76CB26420FC /* Pods_XapoiOSInterview.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +61,11 @@
 		BB6FAC7720D75939008F9DFB /* XapoiOSInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XapoiOSInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FAC7B20D75939008F9DFB /* XapoiOSInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XapoiOSInterviewUITests.swift; sourceTree = "<group>"; };
 		BB6FAC7D20D75939008F9DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBF1693920D7F5570066286A /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		BBF1693B20D7FACF0066286A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BBF1693D20D7FCF70066286A /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		BBF1694120D7FEED0066286A /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		BBF1694320D800A60066286A /* Readme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readme.swift; sourceTree = "<group>"; };
 		CCD9608194D1DE101737F89A /* Pods_XapoiOSInterviewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XapoiOSInterviewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA6A884FFF2C7C410DFAD1F /* Pods-XapoiOSInterviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewTests/Pods-XapoiOSInterviewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFDBAD53C0BE7B7839135FF5 /* Pods-XapoiOSInterviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewUITests/Pods-XapoiOSInterviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +134,7 @@
 		BB6FAC5A20D75937008F9DFB /* XapoiOSInterview */ = {
 			isa = PBXGroup;
 			children = (
+				BBF1693820D7F5420066286A /* Networking */,
 				BBF1693620D75ADE0066286A /* Supporting Files */,
 				BB6FAC5D20D75937008F9DFB /* ViewController.swift */,
 				BB6FAC5F20D75937008F9DFB /* Main.storyboard */,
@@ -152,12 +163,32 @@
 		BBF1693620D75ADE0066286A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BBF1693B20D7FACF0066286A /* Constants.swift */,
 				BB6FAC5B20D75937008F9DFB /* AppDelegate.swift */,
 				BB6FAC6220D75939008F9DFB /* Assets.xcassets */,
 				BB6FAC6420D75939008F9DFB /* LaunchScreen.storyboard */,
 				BB6FAC6720D75939008F9DFB /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBF1693820D7F5420066286A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BBF1694020D7FEE30066286A /* Models */,
+				BBF1693920D7F5570066286A /* ApiRouter.swift */,
+				BBF1693D20D7FCF70066286A /* ApiClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BBF1694020D7FEE30066286A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BBF1694120D7FEED0066286A /* Repo.swift */,
+				BBF1694320D800A60066286A /* Readme.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D94075C1C65ACBFED11306A2 /* Pods */ = {
@@ -398,6 +429,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XapoiOSInterview/Pods-XapoiOSInterview-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -406,6 +439,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -472,7 +507,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6FAC5E20D75937008F9DFB /* ViewController.swift in Sources */,
+				BBF1693A20D7F5570066286A /* ApiRouter.swift in Sources */,
 				BB6FAC5C20D75937008F9DFB /* AppDelegate.swift in Sources */,
+				BBF1694220D7FEED0066286A /* Repo.swift in Sources */,
+				BBF1693C20D7FACF0066286A /* Constants.swift in Sources */,
+				BBF1694420D800A60066286A /* Readme.swift in Sources */,
+				BBF1693E20D7FCF70066286A /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
