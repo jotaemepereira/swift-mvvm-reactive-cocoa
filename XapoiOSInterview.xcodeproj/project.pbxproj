@@ -10,8 +10,6 @@
 		178931F114AFCE2E3B2E55DF /* Pods_XapoiOSInterviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711C50C87A9208D0B32B5AAB /* Pods_XapoiOSInterviewTests.framework */; };
 		AC36155AF058C0F1ECEA1D3D /* Pods_XapoiOSInterviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD9608194D1DE101737F89A /* Pods_XapoiOSInterviewUITests.framework */; };
 		BB6FAC5C20D75937008F9DFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC5B20D75937008F9DFB /* AppDelegate.swift */; };
-		BB6FAC5E20D75937008F9DFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC5D20D75937008F9DFB /* ViewController.swift */; };
-		BB6FAC6120D75937008F9DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6FAC5F20D75937008F9DFB /* Main.storyboard */; };
 		BB6FAC6320D75939008F9DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6FAC6220D75939008F9DFB /* Assets.xcassets */; };
 		BB6FAC6620D75939008F9DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6FAC6420D75939008F9DFB /* LaunchScreen.storyboard */; };
 		BB6FAC7120D75939008F9DFB /* XapoiOSInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC7020D75939008F9DFB /* XapoiOSInterviewTests.swift */; };
@@ -21,6 +19,8 @@
 		BBF1693E20D7FCF70066286A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1693D20D7FCF70066286A /* ApiClient.swift */; };
 		BBF1694220D7FEED0066286A /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694120D7FEED0066286A /* Repo.swift */; };
 		BBF1694420D800A60066286A /* Readme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694320D800A60066286A /* Readme.swift */; };
+		BBF1694820D80BE50066286A /* TrendingReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF1694720D80BE50066286A /* TrendingReposViewController.xib */; };
+		BBF1694A20D80BF10066286A /* TrendingReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694920D80BF10066286A /* TrendingReposViewController.swift */; };
 		F43B0FDC6C945A085618B8C4 /* Pods_XapoiOSInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513234BA095FC76CB26420FC /* Pods_XapoiOSInterview.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +50,6 @@
 		BADF47634486A8B8990B4093 /* Pods-XapoiOSInterviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewUITests/Pods-XapoiOSInterviewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BB6FAC5820D75936008F9DFB /* XapoiOSInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XapoiOSInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FAC5B20D75937008F9DFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB6FAC5D20D75937008F9DFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BB6FAC6020D75937008F9DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB6FAC6220D75939008F9DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB6FAC6520D75939008F9DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB6FAC6720D75939008F9DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +64,8 @@
 		BBF1693D20D7FCF70066286A /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		BBF1694120D7FEED0066286A /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		BBF1694320D800A60066286A /* Readme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readme.swift; sourceTree = "<group>"; };
+		BBF1694720D80BE50066286A /* TrendingReposViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingReposViewController.xib; sourceTree = "<group>"; };
+		BBF1694920D80BF10066286A /* TrendingReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewController.swift; sourceTree = "<group>"; };
 		CCD9608194D1DE101737F89A /* Pods_XapoiOSInterviewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XapoiOSInterviewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA6A884FFF2C7C410DFAD1F /* Pods-XapoiOSInterviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewTests/Pods-XapoiOSInterviewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFDBAD53C0BE7B7839135FF5 /* Pods-XapoiOSInterviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewUITests/Pods-XapoiOSInterviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,10 +134,9 @@
 		BB6FAC5A20D75937008F9DFB /* XapoiOSInterview */ = {
 			isa = PBXGroup;
 			children = (
+				BBF1694520D80B920066286A /* Stories */,
 				BBF1693820D7F5420066286A /* Networking */,
 				BBF1693620D75ADE0066286A /* Supporting Files */,
-				BB6FAC5D20D75937008F9DFB /* ViewController.swift */,
-				BB6FAC5F20D75937008F9DFB /* Main.storyboard */,
 			);
 			path = XapoiOSInterview;
 			sourceTree = "<group>";
@@ -189,6 +188,23 @@
 				BBF1694320D800A60066286A /* Readme.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BBF1694520D80B920066286A /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				BBF1694620D80B9E0066286A /* Trending Repos */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		BBF1694620D80B9E0066286A /* Trending Repos */ = {
+			isa = PBXGroup;
+			children = (
+				BBF1694720D80BE50066286A /* TrendingReposViewController.xib */,
+				BBF1694920D80BF10066286A /* TrendingReposViewController.swift */,
+			);
+			path = "Trending Repos";
 			sourceTree = "<group>";
 		};
 		D94075C1C65ACBFED11306A2 /* Pods */ = {
@@ -319,7 +335,7 @@
 			files = (
 				BB6FAC6620D75939008F9DFB /* LaunchScreen.storyboard in Resources */,
 				BB6FAC6320D75939008F9DFB /* Assets.xcassets in Resources */,
-				BB6FAC6120D75937008F9DFB /* Main.storyboard in Resources */,
+				BBF1694820D80BE50066286A /* TrendingReposViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,11 +522,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6FAC5E20D75937008F9DFB /* ViewController.swift in Sources */,
 				BBF1693A20D7F5570066286A /* ApiRouter.swift in Sources */,
 				BB6FAC5C20D75937008F9DFB /* AppDelegate.swift in Sources */,
 				BBF1694220D7FEED0066286A /* Repo.swift in Sources */,
 				BBF1693C20D7FACF0066286A /* Constants.swift in Sources */,
+				BBF1694A20D80BF10066286A /* TrendingReposViewController.swift in Sources */,
 				BBF1694420D800A60066286A /* Readme.swift in Sources */,
 				BBF1693E20D7FCF70066286A /* ApiClient.swift in Sources */,
 			);
@@ -548,14 +564,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BB6FAC5F20D75937008F9DFB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB6FAC6020D75937008F9DFB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BB6FAC6420D75939008F9DFB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
