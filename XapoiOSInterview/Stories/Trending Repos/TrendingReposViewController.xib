@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrendingReposViewController" customModule="XapoiOSInterview" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="0Z6-1y-otf" id="YRy-9C-tbN"/>
+                <outlet property="searchBar" destination="c49-pm-hFc" id="SLL-Jw-D2X"/>
+                <outlet property="searchDisplayController" destination="dTL-H3-cb8" id="lq3-4U-1lI"/>
+                <outlet property="tableView" destination="US0-9l-s8T" id="0ck-Jx-Q4u"/>
                 <outlet property="view" destination="iN0-l3-epB" id="mbd-Kw-sVS"/>
             </connections>
         </placeholder>
@@ -20,19 +24,49 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending repositories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqh-EN-ZJM">
-                    <rect key="frame" x="106.5" y="333" width="162" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHP-oc-70J">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="Github Trends" id="Ucv-fi-LvW"/>
+                    </items>
+                </navigationBar>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="c49-pm-hFc">
+                    <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="US0-9l-s8T">
+                    <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0Z6-1y-otf">
+                    <rect key="frame" x="177" y="333.5" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="mqh-EN-ZJM" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="LRY-sC-PKp"/>
-                <constraint firstItem="mqh-EN-ZJM" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="s7L-EF-cVO"/>
+                <constraint firstItem="0Z6-1y-otf" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="CRn-uE-t4p"/>
+                <constraint firstItem="c49-pm-hFc" firstAttribute="top" secondItem="hHP-oc-70J" secondAttribute="bottom" id="GAD-bf-Cl4"/>
+                <constraint firstItem="c49-pm-hFc" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="OVw-9a-Gfa"/>
+                <constraint firstItem="hHP-oc-70J" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="XsU-Vm-Guv"/>
+                <constraint firstItem="US0-9l-s8T" firstAttribute="top" secondItem="c49-pm-hFc" secondAttribute="bottom" id="bPc-u9-mst"/>
+                <constraint firstItem="c49-pm-hFc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="f9K-Oe-WPb"/>
+                <constraint firstItem="0Z6-1y-otf" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="jce-pB-eQl"/>
+                <constraint firstItem="hHP-oc-70J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sz1-EM-nSJ"/>
+                <constraint firstItem="hHP-oc-70J" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="tRa-UV-2t5"/>
+                <constraint firstItem="US0-9l-s8T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="v2Q-Vx-xFG"/>
+                <constraint firstItem="US0-9l-s8T" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="wm6-8v-i5L"/>
+                <constraint firstItem="US0-9l-s8T" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="zJW-MZ-xUQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
+        <searchDisplayController id="dTL-H3-cb8">
+            <connections>
+                <outlet property="delegate" destination="-1" id="Ojm-yR-EVB"/>
+                <outlet property="searchContentsController" destination="-1" id="du1-4T-hBR"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="9Tr-be-dwY"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="0B0-mh-9JL"/>
+            </connections>
+        </searchDisplayController>
     </objects>
 </document>

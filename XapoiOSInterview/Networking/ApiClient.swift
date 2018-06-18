@@ -9,41 +9,48 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import ReactiveSwift
 import ObjectMapper
+import Result
 
 protocol ApiClientProtocol {
-    func getTrendingRepos(page: Int, completion: @escaping(Result<RepoSearchResponse>) -> Void)
-    func getReadme(owner: String, repoName: String, completion: @escaping(Result<Readme>) -> Void)
+    func getTrendingRepos(page: Int) -> SignalProducer<[Repo], NoError>
+    func getReadme(owner: String, repoName: String) -> SignalProducer<Readme, NoError>
 }
 
 struct ApiClient: ApiClientProtocol {
 
-    func getTrendingRepos(page: Int, completion: @escaping (Result<RepoSearchResponse>) -> Void) {
-        Alamofire.request(ApiRouter.getTrendingRepos(page: page, query: "ios", sort: "stars", order: "desc"))
-            .debugLog()
+    func getTrendingRepos(page: Int) -> SignalProducer<[Repo], NoError> {
+        return SignalProducer { observer, disposable in
+            Alamofire.request(ApiRouter.getTrendingRepos(page: page, query: "ios", sort: "stars", order: "desc"))
             .validate()
             .responseObject { (response: DataResponse<RepoSearchResponse>) in
                 switch response.result {
                 case .success:
-                    completion(Result.success(response.value!))
+                    observer.send(value: response.result.value!.items)
+                    observer.sendCompleted()
                 case .failure(let error):
-                    print(error)
-                    completion(Result.failure(error))
+                    print(error.localizedDescription)
+                    observer.send(error: (error as? NoError)!)
                 }
+            }
         }
     }
     
-    func getReadme(owner: String, repoName: String, completion: @escaping (Result<Readme>) -> Void) {
-        Alamofire.request(ApiRouter.getReadme(owner: owner, repoName: repoName))
-            .validate()
-            .responseObject { (response: DataResponse<Readme>) in
-                switch response.result {
-                case .success:
-                    completion(Result.success(response.value!))
-                case .failure(let error):
-                    print(error)
-                    completion(Result.failure(error))
-                }
+    func getReadme(owner: String, repoName: String) -> SignalProducer<Readme, NoError> {
+        return SignalProducer { observer, disposable in
+            Alamofire.request(ApiRouter.getReadme(owner: owner, repoName: repoName))
+                .validate()
+                .responseObject { (response: DataResponse<Readme>) in
+                    switch response.result {
+                    case .success:
+                        observer.send(value: response.result.value!)
+                        observer.sendCompleted()
+                    case .failure(let error):
+                        print(error)
+                        observer.send(error: (error as? NoError)!)
+                    }
+            }
         }
     }
 }

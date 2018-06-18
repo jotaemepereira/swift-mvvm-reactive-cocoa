@@ -21,6 +21,9 @@
 		BBF1694420D800A60066286A /* Readme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694320D800A60066286A /* Readme.swift */; };
 		BBF1694820D80BE50066286A /* TrendingReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF1694720D80BE50066286A /* TrendingReposViewController.xib */; };
 		BBF1694A20D80BF10066286A /* TrendingReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694920D80BF10066286A /* TrendingReposViewController.swift */; };
+		BBF1694C20D80EE70066286A /* TrendingReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694B20D80EE70066286A /* TrendingReposViewModel.swift */; };
+		BBF1694F20D81E270066286A /* RepoCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF1694E20D81E270066286A /* RepoCellView.xib */; };
+		BBF1695120D81E320066286A /* RepoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1695020D81E320066286A /* RepoCellView.swift */; };
 		F43B0FDC6C945A085618B8C4 /* Pods_XapoiOSInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513234BA095FC76CB26420FC /* Pods_XapoiOSInterview.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,9 @@
 		BBF1694320D800A60066286A /* Readme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readme.swift; sourceTree = "<group>"; };
 		BBF1694720D80BE50066286A /* TrendingReposViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingReposViewController.xib; sourceTree = "<group>"; };
 		BBF1694920D80BF10066286A /* TrendingReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewController.swift; sourceTree = "<group>"; };
+		BBF1694B20D80EE70066286A /* TrendingReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModel.swift; sourceTree = "<group>"; };
+		BBF1694E20D81E270066286A /* RepoCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCellView.xib; sourceTree = "<group>"; };
+		BBF1695020D81E320066286A /* RepoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellView.swift; sourceTree = "<group>"; };
 		CCD9608194D1DE101737F89A /* Pods_XapoiOSInterviewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XapoiOSInterviewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA6A884FFF2C7C410DFAD1F /* Pods-XapoiOSInterviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewTests/Pods-XapoiOSInterviewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFDBAD53C0BE7B7839135FF5 /* Pods-XapoiOSInterviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewUITests/Pods-XapoiOSInterviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 		BB6FAC5A20D75937008F9DFB /* XapoiOSInterview */ = {
 			isa = PBXGroup;
 			children = (
+				BBF1694020D7FEE30066286A /* Models */,
 				BBF1694520D80B920066286A /* Stories */,
 				BBF1693820D7F5420066286A /* Networking */,
 				BBF1693620D75ADE0066286A /* Supporting Files */,
@@ -174,7 +181,6 @@
 		BBF1693820D7F5420066286A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				BBF1694020D7FEE30066286A /* Models */,
 				BBF1693920D7F5570066286A /* ApiRouter.swift */,
 				BBF1693D20D7FCF70066286A /* ApiClient.swift */,
 			);
@@ -201,10 +207,21 @@
 		BBF1694620D80B9E0066286A /* Trending Repos */ = {
 			isa = PBXGroup;
 			children = (
+				BBF1694D20D81E070066286A /* Cells */,
 				BBF1694720D80BE50066286A /* TrendingReposViewController.xib */,
 				BBF1694920D80BF10066286A /* TrendingReposViewController.swift */,
+				BBF1694B20D80EE70066286A /* TrendingReposViewModel.swift */,
 			);
 			path = "Trending Repos";
+			sourceTree = "<group>";
+		};
+		BBF1694D20D81E070066286A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BBF1694E20D81E270066286A /* RepoCellView.xib */,
+				BBF1695020D81E320066286A /* RepoCellView.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D94075C1C65ACBFED11306A2 /* Pods */ = {
@@ -335,6 +352,7 @@
 			files = (
 				BB6FAC6620D75939008F9DFB /* LaunchScreen.storyboard in Resources */,
 				BB6FAC6320D75939008F9DFB /* Assets.xcassets in Resources */,
+				BBF1694F20D81E270066286A /* RepoCellView.xib in Resources */,
 				BBF1694820D80BE50066286A /* TrendingReposViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +543,8 @@
 				BBF1693A20D7F5570066286A /* ApiRouter.swift in Sources */,
 				BB6FAC5C20D75937008F9DFB /* AppDelegate.swift in Sources */,
 				BBF1694220D7FEED0066286A /* Repo.swift in Sources */,
+				BBF1695120D81E320066286A /* RepoCellView.swift in Sources */,
+				BBF1694C20D80EE70066286A /* TrendingReposViewModel.swift in Sources */,
 				BBF1693C20D7FACF0066286A /* Constants.swift in Sources */,
 				BBF1694A20D80BF10066286A /* TrendingReposViewController.swift in Sources */,
 				BBF1694420D800A60066286A /* Readme.swift in Sources */,

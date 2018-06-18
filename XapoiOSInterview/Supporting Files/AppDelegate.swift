@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupInitialScreen() {
-        let trendingReposVC = TrendingReposViewController()
+        let viewModel = TrendingReposViewModel(apiClient: ApiClient())
+        let trendingReposVC = TrendingReposViewController(viewModel: viewModel)
         window!.rootViewController = trendingReposVC
         window!.makeKeyAndVisible()
     }
