@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		178931F114AFCE2E3B2E55DF /* Pods_XapoiOSInterviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711C50C87A9208D0B32B5AAB /* Pods_XapoiOSInterviewTests.framework */; };
+		AC36155AF058C0F1ECEA1D3D /* Pods_XapoiOSInterviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD9608194D1DE101737F89A /* Pods_XapoiOSInterviewUITests.framework */; };
 		BB6FAC5C20D75937008F9DFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC5B20D75937008F9DFB /* AppDelegate.swift */; };
 		BB6FAC5E20D75937008F9DFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC5D20D75937008F9DFB /* ViewController.swift */; };
 		BB6FAC6120D75937008F9DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6FAC5F20D75937008F9DFB /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		BB6FAC6620D75939008F9DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6FAC6420D75939008F9DFB /* LaunchScreen.storyboard */; };
 		BB6FAC7120D75939008F9DFB /* XapoiOSInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC7020D75939008F9DFB /* XapoiOSInterviewTests.swift */; };
 		BB6FAC7C20D75939008F9DFB /* XapoiOSInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC7B20D75939008F9DFB /* XapoiOSInterviewUITests.swift */; };
+		F43B0FDC6C945A085618B8C4 /* Pods_XapoiOSInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513234BA095FC76CB26420FC /* Pods_XapoiOSInterview.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		513234BA095FC76CB26420FC /* Pods_XapoiOSInterview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XapoiOSInterview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AC527026F7BDFED9CFED15B /* Pods-XapoiOSInterviewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewTests/Pods-XapoiOSInterviewTests.release.xcconfig"; sourceTree = "<group>"; };
+		711C50C87A9208D0B32B5AAB /* Pods_XapoiOSInterviewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XapoiOSInterviewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A59A926ED03658B2281D3941 /* Pods-XapoiOSInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterview/Pods-XapoiOSInterview.debug.xcconfig"; sourceTree = "<group>"; };
+		B6F01B7DC3E3074FE6DD113F /* Pods-XapoiOSInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterview.release.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterview/Pods-XapoiOSInterview.release.xcconfig"; sourceTree = "<group>"; };
+		BADF47634486A8B8990B4093 /* Pods-XapoiOSInterviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewUITests/Pods-XapoiOSInterviewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BB6FAC5820D75936008F9DFB /* XapoiOSInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XapoiOSInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FAC5B20D75937008F9DFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB6FAC5D20D75937008F9DFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		BB6FAC7720D75939008F9DFB /* XapoiOSInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XapoiOSInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FAC7B20D75939008F9DFB /* XapoiOSInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XapoiOSInterviewUITests.swift; sourceTree = "<group>"; };
 		BB6FAC7D20D75939008F9DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCD9608194D1DE101737F89A /* Pods_XapoiOSInterviewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XapoiOSInterviewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA6A884FFF2C7C410DFAD1F /* Pods-XapoiOSInterviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewTests/Pods-XapoiOSInterviewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FFDBAD53C0BE7B7839135FF5 /* Pods-XapoiOSInterviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XapoiOSInterviewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XapoiOSInterviewUITests/Pods-XapoiOSInterviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43B0FDC6C945A085618B8C4 /* Pods_XapoiOSInterview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178931F114AFCE2E3B2E55DF /* Pods_XapoiOSInterviewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC36155AF058C0F1ECEA1D3D /* Pods_XapoiOSInterviewUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5347FC28AC770C89D823A0DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				513234BA095FC76CB26420FC /* Pods_XapoiOSInterview.framework */,
+				711C50C87A9208D0B32B5AAB /* Pods_XapoiOSInterviewTests.framework */,
+				CCD9608194D1DE101737F89A /* Pods_XapoiOSInterviewUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB6FAC4F20D75936008F9DFB = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,8 @@
 				BB6FAC6F20D75939008F9DFB /* XapoiOSInterviewTests */,
 				BB6FAC7A20D75939008F9DFB /* XapoiOSInterviewUITests */,
 				BB6FAC5920D75936008F9DFB /* Products */,
+				D94075C1C65ACBFED11306A2 /* Pods */,
+				5347FC28AC770C89D823A0DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +124,9 @@
 		BB6FAC5A20D75937008F9DFB /* XapoiOSInterview */ = {
 			isa = PBXGroup;
 			children = (
-				BB6FAC5B20D75937008F9DFB /* AppDelegate.swift */,
+				BBF1693620D75ADE0066286A /* Supporting Files */,
 				BB6FAC5D20D75937008F9DFB /* ViewController.swift */,
 				BB6FAC5F20D75937008F9DFB /* Main.storyboard */,
-				BB6FAC6220D75939008F9DFB /* Assets.xcassets */,
-				BB6FAC6420D75939008F9DFB /* LaunchScreen.storyboard */,
-				BB6FAC6720D75939008F9DFB /* Info.plist */,
 			);
 			path = XapoiOSInterview;
 			sourceTree = "<group>";
@@ -125,6 +149,30 @@
 			path = XapoiOSInterviewUITests;
 			sourceTree = "<group>";
 		};
+		BBF1693620D75ADE0066286A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB6FAC5B20D75937008F9DFB /* AppDelegate.swift */,
+				BB6FAC6220D75939008F9DFB /* Assets.xcassets */,
+				BB6FAC6420D75939008F9DFB /* LaunchScreen.storyboard */,
+				BB6FAC6720D75939008F9DFB /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D94075C1C65ACBFED11306A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A59A926ED03658B2281D3941 /* Pods-XapoiOSInterview.debug.xcconfig */,
+				B6F01B7DC3E3074FE6DD113F /* Pods-XapoiOSInterview.release.xcconfig */,
+				ECA6A884FFF2C7C410DFAD1F /* Pods-XapoiOSInterviewTests.debug.xcconfig */,
+				5AC527026F7BDFED9CFED15B /* Pods-XapoiOSInterviewTests.release.xcconfig */,
+				FFDBAD53C0BE7B7839135FF5 /* Pods-XapoiOSInterviewUITests.debug.xcconfig */,
+				BADF47634486A8B8990B4093 /* Pods-XapoiOSInterviewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB6FAC8020D75939008F9DFB /* Build configuration list for PBXNativeTarget "XapoiOSInterview" */;
 			buildPhases = (
+				B922C3889F85FDD2D274895F /* [CP] Check Pods Manifest.lock */,
 				BB6FAC5420D75936008F9DFB /* Sources */,
 				BB6FAC5520D75936008F9DFB /* Frameworks */,
 				BB6FAC5620D75936008F9DFB /* Resources */,
+				92A452E62A5E9FBBA70CC166 /* [CP] Embed Pods Frameworks */,
+				B8E935BA4E4CEA5A772EB463 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB6FAC8320D75939008F9DFB /* Build configuration list for PBXNativeTarget "XapoiOSInterviewTests" */;
 			buildPhases = (
+				22DFC833D9546CB1E793D95D /* [CP] Check Pods Manifest.lock */,
 				BB6FAC6820D75939008F9DFB /* Sources */,
 				BB6FAC6920D75939008F9DFB /* Frameworks */,
 				BB6FAC6A20D75939008F9DFB /* Resources */,
+				426079A5F5FE5F8F8A891636 /* [CP] Embed Pods Frameworks */,
+				6479DEA6482FDB8B623F1BFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB6FAC8620D75939008F9DFB /* Build configuration list for PBXNativeTarget "XapoiOSInterviewUITests" */;
 			buildPhases = (
+				03A404F3C5E25A6AE4DC8843 /* [CP] Check Pods Manifest.lock */,
 				BB6FAC7320D75939008F9DFB /* Sources */,
 				BB6FAC7420D75939008F9DFB /* Frameworks */,
 				BB6FAC7520D75939008F9DFB /* Resources */,
+				30B536964C9B93BBED75C22A /* [CP] Embed Pods Frameworks */,
+				D839F99F8FB47169E538F30F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +307,164 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03A404F3C5E25A6AE4DC8843 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XapoiOSInterviewUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22DFC833D9546CB1E793D95D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XapoiOSInterviewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30B536964C9B93BBED75C22A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XapoiOSInterviewUITests/Pods-XapoiOSInterviewUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		426079A5F5FE5F8F8A891636 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XapoiOSInterviewTests/Pods-XapoiOSInterviewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6479DEA6482FDB8B623F1BFB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XapoiOSInterviewTests/Pods-XapoiOSInterviewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92A452E62A5E9FBBA70CC166 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XapoiOSInterview/Pods-XapoiOSInterview-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XapoiOSInterview/Pods-XapoiOSInterview-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8E935BA4E4CEA5A772EB463 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XapoiOSInterview/Pods-XapoiOSInterview-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B922C3889F85FDD2D274895F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XapoiOSInterview-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D839F99F8FB47169E538F30F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XapoiOSInterviewUITests/Pods-XapoiOSInterviewUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB6FAC5420D75936008F9DFB /* Sources */ = {
@@ -428,11 +643,12 @@
 		};
 		BB6FAC8120D75939008F9DFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A59A926ED03658B2281D3941 /* Pods-XapoiOSInterview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PGMQB236A6;
-				INFOPLIST_FILE = XapoiOSInterview/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/XapoiOSInterview/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,11 +662,12 @@
 		};
 		BB6FAC8220D75939008F9DFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6F01B7DC3E3074FE6DD113F /* Pods-XapoiOSInterview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PGMQB236A6;
-				INFOPLIST_FILE = XapoiOSInterview/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/XapoiOSInterview/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +681,7 @@
 		};
 		BB6FAC8420D75939008F9DFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECA6A884FFF2C7C410DFAD1F /* Pods-XapoiOSInterviewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +703,7 @@
 		};
 		BB6FAC8520D75939008F9DFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AC527026F7BDFED9CFED15B /* Pods-XapoiOSInterviewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +725,7 @@
 		};
 		BB6FAC8720D75939008F9DFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFDBAD53C0BE7B7839135FF5 /* Pods-XapoiOSInterviewUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +746,7 @@
 		};
 		BB6FAC8820D75939008F9DFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BADF47634486A8B8990B4093 /* Pods-XapoiOSInterviewUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

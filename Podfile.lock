@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.7.2)
+  - ReactiveCocoa (7.2.0):
+    - ReactiveSwift (~> 3.1)
+  - ReactiveSwift (3.1.0):
+    - Result (~> 3.2)
+  - Result (3.2.4)
+  - Swinject (2.4.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - ReactiveCocoa (~> 7.0)
+  - Swinject
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  ReactiveCocoa: 476dae7ca790f40d30d186a1bd7ebae4290395d5
+  ReactiveSwift: 5b26d2e988fe0eed2daf48c4054d1de74db50184
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
+
+PODFILE CHECKSUM: 82dd8a7e92807d94de4ab62582edeb2f0ab06db5
+
+COCOAPODS: 1.4.0
