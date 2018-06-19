@@ -11,29 +11,59 @@ import ReactiveSwift
 import Result
 
 class TrendingReposViewModel {
-    
-    private var repos: [Repo]
-    private var apiClient: ApiClient
-    
     //Inputs
+    let searchReposSignal = MutableProperty<String?>(nil)
+    let alertMessageSignal: Signal<String, NoError>
     
     // Outputs
     let repoChangesSignal: Signal<Void, NoError>
     let isLoading = MutableProperty(false)
     
+    private var repos: [Repo]
+    private var filteredRepos: [Repo]
+    private var apiClient: ApiClient
     private var page: Int
     private var refresh = false
     private let repoChangesObserver: Signal<Void, NoError>.Observer
+    private let alertMessageObserver: Signal<String, NoError>.Observer
     
     init(apiClient: ApiClient) {
         self.page = 1
         self.apiClient = apiClient
         self.repos = []
+        self.filteredRepos = []
         self.isLoading.value = false
         
         let (repoChangesSignal, repoChangesObserver) = Signal<Void, NoError>.pipe()
         self.repoChangesSignal = repoChangesSignal
         self.repoChangesObserver = repoChangesObserver
+        
+        let (alertMessageSignal, alertMessageObserver) = Signal<String, NoError>.pipe()
+        self.alertMessageSignal = alertMessageSignal
+        self.alertMessageObserver = alertMessageObserver
+        
+        
+        SignalProducer(searchReposSignal)
+            .on(starting: { self.isLoading.value = true })
+            .map { (query) -> [Repo] in
+                if let query = query {
+                    if query.isEmpty {
+                        return self.repos
+                    }
+                    
+                    return self.repos.filter {
+                        $0.description.lowercased().contains(query.lowercased()) ||
+                            $0.name.lowercased().contains(query.lowercased()) }
+                } else {
+                    return self.repos
+                }
+            }
+            .startWithValues { (repos) in
+                self.filteredRepos.removeAll()
+                self.filteredRepos.append(contentsOf: repos)
+                self.repoChangesObserver.send(value: ())
+                self.isLoading.value = false
+            }
         
         loadRepos()
     }
@@ -52,42 +82,49 @@ class TrendingReposViewModel {
     private func loadRepos() {
         apiClient.getTrendingRepos(page: page)
             .on(starting: { self.isLoading.value = true })
-            .flatMap(.latest, { (repos) -> SignalProducer<[Repo], NoError> in
-                return SignalProducer<[Repo], NoError>(value: repos)
+            .flatMap(.latest, { (repos) -> SignalProducer<[Repo], AnyError> in
+                return SignalProducer<[Repo], AnyError>(value: repos)
             })
             .on(completed: { self.isLoading.value = false })
-            .promoteError()
             .observe(on: UIScheduler())
-            .startWithValues { (repos) in
-                if self.refresh {
-                    self.repos.removeAll()
-                    self.refresh = false
+            .startWithResult({ (result) in
+                if let repos = result.value {
+                    if self.refresh {
+                        self.repos.removeAll()
+                        self.filteredRepos.removeAll()
+                        self.refresh = false
+                    }
+                    
+                    self.repos.append(contentsOf: repos)
+                    self.filteredRepos.append(contentsOf: repos)
+                    self.repoChangesObserver.send(value: ())
+                } else {
+                    self.isLoading.value = false
+                    self.alertMessageObserver.send(value: result.error!.localizedDescription)
                 }
-                
-                self.repos.append(contentsOf: repos)
-                self.repoChangesObserver.send(value: ())
-        }
+            })
+            
     }
     
     func numberOfRepos() -> Int {
-        return repos.count
+        return filteredRepos.count
     }
     
     func lastPositionTillScrol() -> Int {
-        return repos.count - 3
+        return filteredRepos.count - 3
     }
     
     func repoNameAt(position: Int) -> String {
-        return repos[position].name
+        return filteredRepos[position].name
     }
     
     func repoStarsAt(position: Int) -> String {
-        let stars = String(repos[position].stars)
+        let stars = String(filteredRepos[position].stars)
         
         return "Stars: \(stars)"
     }
     
     func repoDescriptionAt(position: Int) -> String {
-        return repos[position].description
+        return filteredRepos[position].description
     }
 }

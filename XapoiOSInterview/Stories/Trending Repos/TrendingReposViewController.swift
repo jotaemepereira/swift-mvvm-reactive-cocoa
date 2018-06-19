@@ -42,13 +42,21 @@ class TrendingReposViewController: UIViewController {
     }
     
     private func bindViewModel() {
+        viewModel.searchReposSignal <~ searchBar.reactive.continuousTextValues
+        
         viewModel.repoChangesSignal
             .observe(on: UIScheduler())
-            .observeValues({ (_) in
+            .observeValues {
                 guard let tableView = self.tableView else { return }
                 
                 tableView.reloadData()
-            })
+            }
+        
+        viewModel.alertMessageSignal
+            .observe(on: UIScheduler())
+            .observeValues { (alertMessage) in
+                self.showErrorAlert(alertMessage: alertMessage)
+            }
         
         viewModel.isLoading.producer
             .observe(on: UIScheduler())
@@ -61,6 +69,17 @@ class TrendingReposViewController: UIViewController {
                     self.activityIndicator.stopAnimating()
                 }
         }
+    }
+    
+    private func showErrorAlert(alertMessage: String) {
+        let alertController = UIAlertController(
+            title: "Error!",
+            message: alertMessage,
+            preferredStyle: .alert
+        )
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     private func setupTableView() {
@@ -76,6 +95,7 @@ class TrendingReposViewController: UIViewController {
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        self.searchBar.text = ""
         viewModel.refreshRepos()
     }
 }
@@ -107,7 +127,7 @@ extension TrendingReposViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.lastPositionTillScrol() {
+        if searchBar.text!.isEmpty && indexPath.row == viewModel.lastPositionTillScrol() {
             self.viewModel.loadMoreRepos()
         }
     }

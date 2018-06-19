@@ -14,13 +14,13 @@ import ObjectMapper
 import Result
 
 protocol ApiClientProtocol {
-    func getTrendingRepos(page: Int) -> SignalProducer<[Repo], NoError>
-    func getReadme(owner: String, repoName: String) -> SignalProducer<Readme, NoError>
+    func getTrendingRepos(page: Int) -> SignalProducer<[Repo], AnyError>
+    func getReadme(owner: String, repoName: String) -> SignalProducer<Readme, AnyError>
 }
 
 struct ApiClient: ApiClientProtocol {
 
-    func getTrendingRepos(page: Int) -> SignalProducer<[Repo], NoError> {
+    func getTrendingRepos(page: Int) -> SignalProducer<[Repo], AnyError> {
         return SignalProducer { observer, disposable in
             Alamofire.request(ApiRouter.getTrendingRepos(page: page, query: "ios", sort: "stars", order: "desc"))
             .validate()
@@ -30,14 +30,13 @@ struct ApiClient: ApiClientProtocol {
                     observer.send(value: response.result.value!.items)
                     observer.sendCompleted()
                 case .failure(let error):
-                    print(error.localizedDescription)
-                    observer.send(error: (error as? NoError)!)
+                    observer.send(error: AnyError(error))
                 }
             }
         }
     }
     
-    func getReadme(owner: String, repoName: String) -> SignalProducer<Readme, NoError> {
+    func getReadme(owner: String, repoName: String) -> SignalProducer<Readme, AnyError> {
         return SignalProducer { observer, disposable in
             Alamofire.request(ApiRouter.getReadme(owner: owner, repoName: repoName))
                 .validate()
@@ -48,7 +47,7 @@ struct ApiClient: ApiClientProtocol {
                         observer.sendCompleted()
                     case .failure(let error):
                         print(error)
-                        observer.send(error: (error as? NoError)!)
+                        observer.send(error: AnyError(error))
                     }
             }
         }
