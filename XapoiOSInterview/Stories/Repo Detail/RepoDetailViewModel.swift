@@ -50,9 +50,9 @@ class RepoDetailViewModel {
     private let alertMessageObserver: Signal<String, NoError>.Observer
     
     private let repo: Repo
-    private let apiClient: ApiClient
+    private let apiClient: ApiClientProtocol
     
-    init(repo: Repo, apiClient: ApiClient) {
+    init(repo: Repo, apiClient: ApiClientProtocol) {
         self.repo = repo
         self.apiClient = apiClient
         

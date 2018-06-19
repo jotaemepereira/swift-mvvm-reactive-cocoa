@@ -13,11 +13,6 @@ import ReactiveSwift
 import ObjectMapper
 import Result
 
-protocol ApiClientProtocol {
-    func getTrendingRepos(page: Int) -> SignalProducer<[Repo], AnyError>
-    func getReadme(owner: String, repoName: String) -> SignalProducer<Readme, AnyError>
-}
-
 struct ApiClient: ApiClientProtocol {
 
     func getTrendingRepos(page: Int) -> SignalProducer<[Repo], AnyError> {
