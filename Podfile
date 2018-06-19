@@ -7,9 +7,11 @@ target 'XapoiOSInterview' do
   # Pods for XapoiOSInterview
   pod 'ReactiveCocoa', '~> 7.0'
   pod 'Alamofire', '~> 4.7'
-  pod 'Swinject'
+  pod 'Swinject', '~> 2.4.0'
   pod 'ObjectMapper', '~> 3.1'
   pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'Down', '~> 0.5.1'
+  pod 'Kingfisher', '~> 4.0'
  
   target 'XapoiOSInterviewTests' do
     inherit! :search_paths

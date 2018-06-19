@@ -103,7 +103,6 @@ class TrendingReposViewModel {
                     self.alertMessageObserver.send(value: result.error!.localizedDescription)
                 }
             })
-            
     }
     
     func numberOfRepos() -> Int {
@@ -126,5 +125,9 @@ class TrendingReposViewModel {
     
     func repoDescriptionAt(position: Int) -> String {
         return filteredRepos[position].description
+    }
+    
+    func getRepoDetailViewModelAt(position: Int) -> RepoDetailViewModel {
+        return RepoDetailViewModel(repo: filteredRepos[position], apiClient: self.apiClient)
     }
 }

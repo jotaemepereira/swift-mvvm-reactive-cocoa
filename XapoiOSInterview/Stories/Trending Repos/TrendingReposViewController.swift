@@ -11,7 +11,7 @@ import UIKit
 import ReactiveCocoa
 import ReactiveSwift
 
-class TrendingReposViewController: UIViewController {
+class TrendingReposViewController: BaseViewController {
     
     private let repoCellIdentifier = "RepoCellView"
     private let repoCellHeight: CGFloat = 110.0
@@ -71,17 +71,6 @@ class TrendingReposViewController: UIViewController {
         }
     }
     
-    private func showErrorAlert(alertMessage: String) {
-        let alertController = UIAlertController(
-            title: "Error!",
-            message: alertMessage,
-            preferredStyle: .alert
-        )
-        
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
     private func setupTableView() {
         let nib = UINib(nibName: "RepoCellView", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: repoCellIdentifier)
@@ -119,7 +108,7 @@ extension TrendingReposViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        //TODO: Present repo detail view controller
+        self.present(RepoDetailViewController(viewModel: self.viewModel.getRepoDetailViewModelAt(position: indexPath.row)), animated: false)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
