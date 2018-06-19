@@ -14,6 +14,11 @@
 		BB6FAC6620D75939008F9DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6FAC6420D75939008F9DFB /* LaunchScreen.storyboard */; };
 		BB6FAC7120D75939008F9DFB /* XapoiOSInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC7020D75939008F9DFB /* XapoiOSInterviewTests.swift */; };
 		BB6FAC7C20D75939008F9DFB /* XapoiOSInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC7B20D75939008F9DFB /* XapoiOSInterviewUITests.swift */; };
+		BBA1268120D885BC003B89CE /* RepoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA1268020D885BC003B89CE /* RepoDetailViewController.xib */; };
+		BBA1268320D885C6003B89CE /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268220D885C6003B89CE /* RepoDetailViewController.swift */; };
+		BBA1268520D886CE003B89CE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268420D886CE003B89CE /* Extensions.swift */; };
+		BBA1268720D88A01003B89CE /* RepoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268620D88A01003B89CE /* RepoDetailViewModel.swift */; };
+		BBA1268920D89959003B89CE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268820D89959003B89CE /* BaseViewController.swift */; };
 		BBF1693A20D7F5570066286A /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1693920D7F5570066286A /* ApiRouter.swift */; };
 		BBF1693C20D7FACF0066286A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1693B20D7FACF0066286A /* Constants.swift */; };
 		BBF1693E20D7FCF70066286A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1693D20D7FCF70066286A /* ApiClient.swift */; };
@@ -62,6 +67,11 @@
 		BB6FAC7720D75939008F9DFB /* XapoiOSInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XapoiOSInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FAC7B20D75939008F9DFB /* XapoiOSInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XapoiOSInterviewUITests.swift; sourceTree = "<group>"; };
 		BB6FAC7D20D75939008F9DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBA1268020D885BC003B89CE /* RepoDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoDetailViewController.xib; sourceTree = "<group>"; };
+		BBA1268220D885C6003B89CE /* RepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
+		BBA1268420D886CE003B89CE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BBA1268620D88A01003B89CE /* RepoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewModel.swift; sourceTree = "<group>"; };
+		BBA1268820D89959003B89CE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BBF1693920D7F5570066286A /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		BBF1693B20D7FACF0066286A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBF1693D20D7FCF70066286A /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -166,6 +176,16 @@
 			path = XapoiOSInterviewUITests;
 			sourceTree = "<group>";
 		};
+		BBA1267F20D884D8003B89CE /* Repo Detail */ = {
+			isa = PBXGroup;
+			children = (
+				BBA1268020D885BC003B89CE /* RepoDetailViewController.xib */,
+				BBA1268220D885C6003B89CE /* RepoDetailViewController.swift */,
+				BBA1268620D88A01003B89CE /* RepoDetailViewModel.swift */,
+			);
+			path = "Repo Detail";
+			sourceTree = "<group>";
+		};
 		BBF1693620D75ADE0066286A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +194,7 @@
 				BB6FAC6220D75939008F9DFB /* Assets.xcassets */,
 				BB6FAC6420D75939008F9DFB /* LaunchScreen.storyboard */,
 				BB6FAC6720D75939008F9DFB /* Info.plist */,
+				BBA1268420D886CE003B89CE /* Extensions.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -199,7 +220,9 @@
 		BBF1694520D80B920066286A /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				BBA1267F20D884D8003B89CE /* Repo Detail */,
 				BBF1694620D80B9E0066286A /* Trending Repos */,
+				BBA1268820D89959003B89CE /* BaseViewController.swift */,
 			);
 			path = Stories;
 			sourceTree = "<group>";
@@ -353,6 +376,7 @@
 				BB6FAC6620D75939008F9DFB /* LaunchScreen.storyboard in Resources */,
 				BB6FAC6320D75939008F9DFB /* Assets.xcassets in Resources */,
 				BBF1694F20D81E270066286A /* RepoCellView.xib in Resources */,
+				BBA1268120D885BC003B89CE /* RepoDetailViewController.xib in Resources */,
 				BBF1694820D80BE50066286A /* TrendingReposViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +488,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-XapoiOSInterview/Pods-XapoiOSInterview-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Down/Down.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
@@ -474,6 +500,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Down.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
@@ -540,14 +568,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA1268920D89959003B89CE /* BaseViewController.swift in Sources */,
 				BBF1693A20D7F5570066286A /* ApiRouter.swift in Sources */,
 				BB6FAC5C20D75937008F9DFB /* AppDelegate.swift in Sources */,
 				BBF1694220D7FEED0066286A /* Repo.swift in Sources */,
 				BBF1695120D81E320066286A /* RepoCellView.swift in Sources */,
 				BBF1694C20D80EE70066286A /* TrendingReposViewModel.swift in Sources */,
+				BBA1268720D88A01003B89CE /* RepoDetailViewModel.swift in Sources */,
 				BBF1693C20D7FACF0066286A /* Constants.swift in Sources */,
 				BBF1694A20D80BF10066286A /* TrendingReposViewController.swift in Sources */,
+				BBA1268320D885C6003B89CE /* RepoDetailViewController.swift in Sources */,
 				BBF1694420D800A60066286A /* Readme.swift in Sources */,
+				BBA1268520D886CE003B89CE /* Extensions.swift in Sources */,
 				BBF1693E20D7FCF70066286A /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,7 +749,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PGMQB236A6;
 				INFOPLIST_FILE = "$(SRCROOT)/XapoiOSInterview/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jotaemepereira.XapoiOSInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -733,7 +768,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PGMQB236A6;
 				INFOPLIST_FILE = "$(SRCROOT)/XapoiOSInterview/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jotaemepereira.XapoiOSInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -750,7 +788,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PGMQB236A6;
 				INFOPLIST_FILE = XapoiOSInterviewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jotaemepereira.XapoiOSInterviewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -768,7 +810,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PGMQB236A6;
 				INFOPLIST_FILE = XapoiOSInterviewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jotaemepereira.XapoiOSInterviewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -785,7 +831,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PGMQB236A6;
 				INFOPLIST_FILE = XapoiOSInterviewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jotaemepereira.XapoiOSInterviewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -802,7 +852,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PGMQB236A6;
 				INFOPLIST_FILE = XapoiOSInterviewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jotaemepereira.XapoiOSInterviewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

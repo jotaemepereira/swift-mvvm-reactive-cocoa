@@ -39,6 +39,7 @@ struct ApiClient: ApiClientProtocol {
     func getReadme(owner: String, repoName: String) -> SignalProducer<Readme, AnyError> {
         return SignalProducer { observer, disposable in
             Alamofire.request(ApiRouter.getReadme(owner: owner, repoName: repoName))
+                .debugLog()
                 .validate()
                 .responseObject { (response: DataResponse<Readme>) in
                     switch response.result {

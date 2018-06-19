@@ -16,7 +16,7 @@ class Readme: Mappable {
     required init?(map: Map) {}
     
     func mapping(map: Map) {
-        content <- map["login"]
-        encoding <- map["avatar_url"]
+        content <- map["content"]
+        encoding <- map["encoding"]
     }
 }
