@@ -30,6 +30,14 @@ class Repo: Mappable {
     var forks = 0
     var owner: Owner?
     
+    init(name: String, description: String, stars: Int, forks: Int, owner: Owner) {
+        self.name = name
+        self.description = description
+        self.stars = stars
+        self.forks = forks
+        self.owner = owner
+    }
+    
     required init?(map: Map) {}
     
     func mapping(map: Map) {
@@ -44,6 +52,11 @@ class Repo: Mappable {
 class Owner: Mappable {
     var login = ""
     var avatarURL = ""
+    
+    init(login: String, avatarURL: String) {
+        self.login = login
+        self.avatarURL = avatarURL
+    }
     
     required init?(map: Map) {}
     

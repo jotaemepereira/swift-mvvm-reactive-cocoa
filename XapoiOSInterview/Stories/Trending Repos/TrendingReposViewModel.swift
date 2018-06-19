@@ -21,13 +21,13 @@ class TrendingReposViewModel {
     
     private var repos: [Repo]
     private var filteredRepos: [Repo]
-    private var apiClient: ApiClient
+    private var apiClient: ApiClientProtocol
     private var page: Int
     private var refresh = false
     private let repoChangesObserver: Signal<Void, NoError>.Observer
     private let alertMessageObserver: Signal<String, NoError>.Observer
     
-    init(apiClient: ApiClient) {
+    init(apiClient: ApiClientProtocol) {
         self.page = 1
         self.apiClient = apiClient
         self.repos = []

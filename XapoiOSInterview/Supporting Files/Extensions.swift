@@ -31,7 +31,7 @@ extension UIColor {
     }
 }
 
-extension String {
+public extension String {
     func base64Decoded() -> String? {
         if let data = Data(base64Encoded: self, options: .ignoreUnknownCharacters) {
             return String(data: data, encoding: .utf8)

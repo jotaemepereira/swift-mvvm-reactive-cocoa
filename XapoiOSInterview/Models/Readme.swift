@@ -13,6 +13,8 @@ class Readme: Mappable {
     var content = ""
     var encoding = ""
     
+    init() {}
+    
     required init?(map: Map) {}
     
     func mapping(map: Map) {

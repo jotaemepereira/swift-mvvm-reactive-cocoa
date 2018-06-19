@@ -12,13 +12,21 @@
 		BB6FAC5C20D75937008F9DFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC5B20D75937008F9DFB /* AppDelegate.swift */; };
 		BB6FAC6320D75939008F9DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6FAC6220D75939008F9DFB /* Assets.xcassets */; };
 		BB6FAC6620D75939008F9DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6FAC6420D75939008F9DFB /* LaunchScreen.storyboard */; };
-		BB6FAC7120D75939008F9DFB /* XapoiOSInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC7020D75939008F9DFB /* XapoiOSInterviewTests.swift */; };
+		BB6FAC7120D75939008F9DFB /* TrendingReposViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC7020D75939008F9DFB /* TrendingReposViewModelTest.swift */; };
 		BB6FAC7C20D75939008F9DFB /* XapoiOSInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6FAC7B20D75939008F9DFB /* XapoiOSInterviewUITests.swift */; };
 		BBA1268120D885BC003B89CE /* RepoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA1268020D885BC003B89CE /* RepoDetailViewController.xib */; };
 		BBA1268320D885C6003B89CE /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268220D885C6003B89CE /* RepoDetailViewController.swift */; };
 		BBA1268520D886CE003B89CE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268420D886CE003B89CE /* Extensions.swift */; };
 		BBA1268720D88A01003B89CE /* RepoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268620D88A01003B89CE /* RepoDetailViewModel.swift */; };
 		BBA1268920D89959003B89CE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268820D89959003B89CE /* BaseViewController.swift */; };
+		BBA1268C20D8A592003B89CE /* MockApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268B20D8A592003B89CE /* MockApi.swift */; };
+		BBA1268F20D8A5CF003B89CE /* ApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268E20D8A5CF003B89CE /* ApiClientProtocol.swift */; };
+		BBA1269020D8A5F6003B89CE /* ApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268E20D8A5CF003B89CE /* ApiClientProtocol.swift */; };
+		BBA1269120D8A609003B89CE /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694120D7FEED0066286A /* Repo.swift */; };
+		BBA1269220D8A60C003B89CE /* Readme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694320D800A60066286A /* Readme.swift */; };
+		BBA1269320D8A93A003B89CE /* TrendingReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1694B20D80EE70066286A /* TrendingReposViewModel.swift */; };
+		BBA1269420D8A9D7003B89CE /* RepoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1268620D88A01003B89CE /* RepoDetailViewModel.swift */; };
+		BBA1269620D8ACE4003B89CE /* RepoDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1269520D8ACE4003B89CE /* RepoDetailViewModelTest.swift */; };
 		BBF1693A20D7F5570066286A /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1693920D7F5570066286A /* ApiRouter.swift */; };
 		BBF1693C20D7FACF0066286A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1693B20D7FACF0066286A /* Constants.swift */; };
 		BBF1693E20D7FCF70066286A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1693D20D7FCF70066286A /* ApiClient.swift */; };
@@ -62,7 +70,7 @@
 		BB6FAC6520D75939008F9DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB6FAC6720D75939008F9DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB6FAC6C20D75939008F9DFB /* XapoiOSInterviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XapoiOSInterviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB6FAC7020D75939008F9DFB /* XapoiOSInterviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XapoiOSInterviewTests.swift; sourceTree = "<group>"; };
+		BB6FAC7020D75939008F9DFB /* TrendingReposViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModelTest.swift; sourceTree = "<group>"; };
 		BB6FAC7220D75939008F9DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB6FAC7720D75939008F9DFB /* XapoiOSInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XapoiOSInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6FAC7B20D75939008F9DFB /* XapoiOSInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XapoiOSInterviewUITests.swift; sourceTree = "<group>"; };
@@ -72,6 +80,9 @@
 		BBA1268420D886CE003B89CE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BBA1268620D88A01003B89CE /* RepoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewModel.swift; sourceTree = "<group>"; };
 		BBA1268820D89959003B89CE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BBA1268B20D8A592003B89CE /* MockApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApi.swift; sourceTree = "<group>"; };
+		BBA1268E20D8A5CF003B89CE /* ApiClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientProtocol.swift; sourceTree = "<group>"; };
+		BBA1269520D8ACE4003B89CE /* RepoDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewModelTest.swift; sourceTree = "<group>"; };
 		BBF1693920D7F5570066286A /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		BBF1693B20D7FACF0066286A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBF1693D20D7FCF70066286A /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -161,7 +172,9 @@
 		BB6FAC6F20D75939008F9DFB /* XapoiOSInterviewTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB6FAC7020D75939008F9DFB /* XapoiOSInterviewTests.swift */,
+				BBA1268A20D8A587003B89CE /* Utils */,
+				BB6FAC7020D75939008F9DFB /* TrendingReposViewModelTest.swift */,
+				BBA1269520D8ACE4003B89CE /* RepoDetailViewModelTest.swift */,
 				BB6FAC7220D75939008F9DFB /* Info.plist */,
 			);
 			path = XapoiOSInterviewTests;
@@ -186,6 +199,14 @@
 			path = "Repo Detail";
 			sourceTree = "<group>";
 		};
+		BBA1268A20D8A587003B89CE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BBA1268B20D8A592003B89CE /* MockApi.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BBF1693620D75ADE0066286A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +225,7 @@
 			children = (
 				BBF1693920D7F5570066286A /* ApiRouter.swift */,
 				BBF1693D20D7FCF70066286A /* ApiClient.swift */,
+				BBA1268E20D8A5CF003B89CE /* ApiClientProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -575,6 +597,7 @@
 				BBF1695120D81E320066286A /* RepoCellView.swift in Sources */,
 				BBF1694C20D80EE70066286A /* TrendingReposViewModel.swift in Sources */,
 				BBA1268720D88A01003B89CE /* RepoDetailViewModel.swift in Sources */,
+				BBA1268F20D8A5CF003B89CE /* ApiClientProtocol.swift in Sources */,
 				BBF1693C20D7FACF0066286A /* Constants.swift in Sources */,
 				BBF1694A20D80BF10066286A /* TrendingReposViewController.swift in Sources */,
 				BBA1268320D885C6003B89CE /* RepoDetailViewController.swift in Sources */,
@@ -588,7 +611,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6FAC7120D75939008F9DFB /* XapoiOSInterviewTests.swift in Sources */,
+				BBA1269220D8A60C003B89CE /* Readme.swift in Sources */,
+				BBA1268C20D8A592003B89CE /* MockApi.swift in Sources */,
+				BBA1269420D8A9D7003B89CE /* RepoDetailViewModel.swift in Sources */,
+				BBA1269020D8A5F6003B89CE /* ApiClientProtocol.swift in Sources */,
+				BB6FAC7120D75939008F9DFB /* TrendingReposViewModelTest.swift in Sources */,
+				BBA1269620D8ACE4003B89CE /* RepoDetailViewModelTest.swift in Sources */,
+				BBA1269120D8A609003B89CE /* Repo.swift in Sources */,
+				BBA1269320D8A93A003B89CE /* TrendingReposViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
