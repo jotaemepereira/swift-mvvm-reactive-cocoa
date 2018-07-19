@@ -1,4 +1,4 @@
-# Xapo iOS Technical Interview
+# Swift MVVM Example
 
 A simple iOS app in Swift that shows a list of trending repositories on Github and a detail of each one when clicked.
 The selected architecture for the project was MVVM (Model-View-ViewModel)
@@ -23,4 +23,4 @@ Added unit tests for both RepoDetailViewModel and RepoDetailViewModel.
 - The trending topic search query is 'ios', so it will show the trending repositories on iOS
 
 ## Improvements
-- Add UI tests (I did not have time to finish them)
+- Add UI tests
